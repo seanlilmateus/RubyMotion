@@ -65,7 +65,7 @@ EOS
             str << indent_line("<false/>", indent)
           when Time
             str << indent_line("<date>#{plist.utc.iso8601}</date>", indent)
-          when Integer
+          when Numeric
             str << indent_line("<real>#{plist}</real>", indent)
           else
             raise "Invalid plist object of type `#{plist.class}' (must be either a Hash, Array, String, or boolean true/false value)"
